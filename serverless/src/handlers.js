@@ -6,8 +6,8 @@ chime.endpoint = new AWS.Endpoint('https://service.chime.aws.amazon.com/console'
 const oneDayFromNow = Math.floor(Date.now() / 1000) + 60 * 60 * 24;
 
 // Read resource names from the environment
-const meetingsTableName = process.env.MEETINGS_TABLE_NAME;
-const attendeesTableName = process.env.ATTENDEES_TABLE_NAME;
+const meetingsTableName = process.env.MEETINGS_TABLE_NAME || "ClassroomDemo-Meetings-ORYJ95GWEYQ5";
+const attendeesTableName = process.env.ATTENDEES_TABLE_NAME || "ClassroomDemo-Attendees-ZZE3H8W6J4AZ";
 
 function uuid() {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -40,6 +40,7 @@ const getMeeting = async(meetingTitle) => {
 }
 
 const putMeeting = async(title, meetingInfo) => {
+  console.log(meetingsTableName, attendeesTableName);
   await ddb.putItem({
     TableName: meetingsTableName,
     Item: {

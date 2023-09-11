@@ -171,6 +171,7 @@ export default class ChimeSdkWrapper implements DeviceChangeObserver {
     }
 
     const { JoinInfo } = json;
+    console.log(JoinInfo);
     if (!JoinInfo) {
       throw new Error(
         this.intl.formatMessage({

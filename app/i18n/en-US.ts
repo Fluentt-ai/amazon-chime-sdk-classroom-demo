@@ -28,7 +28,7 @@ export default {
   'CreateOrJoin.continueButton': `Continue`,
   'CreateOrJoin.notTeacherLink': `Not a teacher? Click here.`,
   'CreateOrJoin.notStudentLink': `Not a student? Click here.`,
-  'CreateOrJoin.classRoomDoesNotExist': `Classroom does not exist`,
+  'CreateOrJoin.classRoomDoesNotExist': ` not exist`,
   'CreateOrJoin.serverError': `Server error`,
 
   'Classroom.classroom': `Classroom`,
